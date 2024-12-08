@@ -1,0 +1,36 @@
+h1 { font-size: var(--font-size-40-px); color: var(--main-dark-color); text-transform: uppercase; }
+
+.form-main-block { padding-top: 45px; }
+.form-main-block h1 { text-align: center; width: 80%; margin: 0 auto; }
+.form-main-block form { margin-top: 20px; display: flex; gap: 10px; align-items: end; justify-content: center; flex-wrap: wrap; }
+.form-main-block form label { width: 285px; }
+.form-main-block form label input { width: 100%; }
+.form-main-block form select { width: 285px; }
+.form-main-block form select input { width: 100%; }
+.form-main-block form .btn { width: 285px; }
+.form-main-block .input-date-wrapp { display: flex; }
+.form-main-block .input-date-wrapp input { width: 100%; }
+
+form label { display: flex; justify-content: space-between; align-items: center; flex-direction: column; gap: 4px; align-items: start; }
+
+label { color: var(--mini-text); font-size: var(--font-size-10-px); font-weight: 400; }
+
+input { background: var(--white-fff); height: 48px; color: var(--main-dark-color); padding: 15px; border-radius: var(--border-radius-15-px); border: none; outline: none; border: 1px solid var(--white-fff); }
+input:focus { border: 1px solid var(--secound-acent-color); }
+
+select { background: var(--white-fff); border: 1px solid var(--white-fff); height: 48px; color: var(--main-dark-color); padding: 15px; border-radius: var(--border-radius-15-px); border: none; outline: none; }
+select:focus { border: 1px solid var(--secound-acent-color); }
+
+.date-label { position: relative; }
+.date-label div { display: flex; gap: 0; width: 100%; }
+.date-label input:first-child { border-radius: 15px 0 0 15px; }
+.date-label input:last-child { border-radius: 0 15px 15px 0; position: relative; }
+.date-label input:last-child::before { content: ''; position: absolute; left: 0; width: 1px; height: 60%; background: #ededed; top: 10px; }
+.date-label::before { content: ''; position: absolute; background: url("../img/icon/calendar.svg"); right: 15px; top: 50%; z-index: 99; width: 14px; height: 14px; }
+
+input[type='date']::-webkit-inner-spin-button, input[type='date']::-webkit-calendar-picker-indicator { display: none; -webkit-appearance: none; }
+
+.summ { position: relative; }
+.summ::before { content: ''; position: absolute; background: url("../img/icon/ruble.svg"); right: 15px; top: 50%; z-index: 99; width: 15px; height: 14px; }
+
+.summ input { position: relative; }

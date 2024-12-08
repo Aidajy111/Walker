@@ -1,0 +1,154 @@
+@mixin display-flex-space-between() {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+@mixin display-flex($margin) {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: $margin;
+}
+@mixin display-flex-column($margin) {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: column;
+	gap: $margin;
+}
+h1 {
+	font-size: var(--font-size-40-px);
+	color: var(--main-dark-color);
+	text-transform: uppercase;
+}
+.form-main-block {
+	padding-top: 45px;
+	h1 {
+		text-align: center;
+		width: 80%;
+		margin: 0 auto;
+	}
+	form {
+		margin-top: 20px;
+		display: flex;
+		gap: 10px;
+		align-items: end;
+		justify-content: center;
+		flex-wrap: wrap;
+		label {
+			width: 285px;
+			input {
+				width: 100%;
+			}
+		}
+		select {
+			width: 285px;
+			input {
+				width: 100%;
+			}
+		}
+		.btn {
+			width: 285px;
+		}
+	}
+	.input-date-wrapp {
+		input {
+			width: 100%;
+		}
+		display: flex;
+	}
+}
+
+form {
+	label {
+		@include display-flex-column(4px);
+		align-items: start;
+	}
+}
+label {
+	color: var(--mini-text);
+	font-size: var(--font-size-10-px);
+	font-weight: 400;
+}
+input {
+	background: var(--white-fff);
+	height: 48px;
+	color: var(--main-dark-color);
+	padding: 15px;
+	border-radius: var(--border-radius-15-px);
+	border: none;
+	outline: none;
+	border: 1px solid var(--white-fff);
+	&:focus {
+		border: 1px solid var(--secound-acent-color);
+	}
+}
+select {
+	background: var(--white-fff);
+	border: 1px solid var(--white-fff);
+	height: 48px;
+	color: var(--main-dark-color);
+	padding: 15px;
+	border-radius: var(--border-radius-15-px);
+	border: none;
+	outline: none;
+	&:focus {
+		border: 1px solid var(--secound-acent-color);
+	}
+}
+.date-label {
+	div {
+		display: flex;
+		gap: 0;
+		width: 100%;
+	}
+	input:first-child {
+		border-radius: 15px 0 0 15px;
+	}
+	input:last-child {
+		border-radius: 0 15px 15px 0;
+		position: relative;
+		&::before {
+			content: '';
+			position: absolute;
+			left: 0;
+			width: 1px;
+			height: 60%;
+			background: #ededed;
+			top: 10px;
+		}
+	}
+	position: relative;
+	&::before {
+		content: '';
+		position: absolute;
+		background: url('../img/icon/calendar.svg');
+		right: 15px;
+		top: 50%;
+		z-index: 99;
+		width: 14px;
+		height: 14px;
+	}
+}
+input[type='date']::-webkit-inner-spin-button,
+input[type='date']::-webkit-calendar-picker-indicator {
+	display: none;
+	-webkit-appearance: none;
+}
+
+.summ {
+	position: relative;
+	&::before {
+		content: '';
+		position: absolute;
+		background: url('../img/icon/ruble.svg');
+		right: 15px;
+		top: 50%;
+		z-index: 99;
+		width: 15px;
+		height: 14px;
+	}
+}
+.summ input {
+	position: relative;
+}

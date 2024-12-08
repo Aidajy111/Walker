@@ -4,13 +4,127 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Walker</title>
+
+		<!-- Подключение шрифтов -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+			rel="stylesheet"
+		/>
+
+		<!-- Подключение стилей -->
+		<link rel="stylesheet" href="./css/root.css" />
 		<link rel="stylesheet" href="./css/style.css" />
+		<link rel="stylesheet" href="./css/header.css" />
+		<link rel="stylesheet" href="./css/main.css" />
 	</head>
 	<body>
-		<header>sdgufc</header>
-		<main></main>
+		<header class="header">
+			<div class="container">
+				<a href="/" class="logo">
+					<img src="./img/icon/logo-walker.svg" alt="logo" />
+				</a>
+				<ul>
+					<li>
+						<a href="#"> Готовые маршруты </a>
+					</li>
+					<li>
+						<a href="#"> Мои маршруты </a>
+					</li>
+					<li>
+						<a href="#"> О приложении </a>
+					</li>
+				</ul>
+				<div class="header-buttons-wrapper">
+					<a href="#" class="btn-secound support">Поддержка</a>
+					<button class="btn-secound profile" id="openProfileModal">
+						Профиль
+					</button>
+				</div>
+				<div class="profile-modal-block" id="openProfileModalBody">
+					<a href="#" class="link-settings s">Настройки</a>
+					<a href="#" class="link-settings p">Профиль</a>
+					<a href="#" class="btn w">Войти</a>
+				</div>
+			</div>
+		</header>
+		<main>
+			<section class="main-block">
+				<div class="container">
+					<div class="form-main-block">
+						<h1>Планируйте путешествие с удовольствием</h1>
+						<form action="#">
+							<label
+								>Название маршрута
+								<input type="text" placeholder="Назовит маршрут" />
+							</label>
+							<label
+								>Выбери страну
+								<select name="countres">
+									<option selected value="s1">Выбери страну</option>
+									<option selected value="Россия">Россия</option>
+								</select>
+							</label>
+							<label
+								>Выберите регион
+								<select name="region">
+									<option selected value="s1">Выберите регион</option>
+									<option selected value="Республика Бурятия">
+										Республика Бурятия
+									</option>
+									<option selected value="	Республика Башкортостан">
+										Республика Башкортостан
+									</option>
+									<option selected value="Кабардино-Балкарская Республика">
+										Кабардино-Балкарская Республика
+									</option>
+									<option selected value="Республика Калмыкия">
+										Республика Калмыкия
+									</option>
+									<option selected value="Республика Коми">
+										Республика Коми
+									</option>
+								</select>
+							</label>
+							<label
+								>Выберите город/поселок
+								<select name="cityes">
+									<option selected value="s1">Необязательно</option>
+									<option selected value="Улан-Удэ">Улан-Удэ</option>
+									<option selected value="Бабушкин">Бабушкин</option>
+									<option selected value="Гусиноозёрск">Гусиноозёрск</option>
+									<option selected value="Северобайкальск">
+										Северобайкальск
+									</option>
+									<option selected value="Северобайкальск">
+										Северобайкальск
+									</option>
+								</select>
+							</label>
+							<label class="date-label"
+								>От/до
+								<div>
+									<input type="date" class="input-field" />
+									<input type="date" class="input-field" />
+								</div>
+							</label>
+							<label class="summ"
+								>Бюджет
+								<input type="text" placeholder="Примерная сумма" />
+							</label>
+							<label
+								>Укажите ваши пожелания через запятую
+								<input type="text" placeholder="кухня, природа, байкал" />
+							</label>
+							<button type="submit" class="btn">Создать маршрут</button>
+						</form>
+					</div>
+				</div>
+			</section>
+		</main>
 		<footer></footer>
-
+		<script src="./js/jquery-3.7.1.min (1).js"></script>
 		<script src="./js/main.js"></script>
 	</body>
 </html>

@@ -1,0 +1,17 @@
+.header { background: var(--white-fff); padding: 10px 0px; position: fixed; top: 0; left: 0; right: 0; width: 100%; }
+.header .container { display: flex; justify-content: space-between; align-items: center; position: relative; }
+.header ul { display: flex; justify-content: center; align-items: center; gap: var(--margin-20-px); }
+.header ul li a { color: var(--mini-text); font-size: var(--font-size-15-px); }
+.header .header-buttons-wrapper { display: flex; justify-content: center; align-items: center; gap: 5px; }
+
+.btn-secound { padding: 10px 30px; border-radius: 100px; border: 1px solid var(--main-dark-color); background: transparent; color: var(--main-dark-color); display: flex; justify-content: center; align-items: center; gap: 8px; height: 38px; cursor: pointer; }
+.btn-secound:hover { text-decoration: none; }
+.btn-secound.support::before { content: url("../img/icon/user-headset 1.svg"); width: 14px; height: 14px; }
+.btn-secound.profile { background: var(--main-dark-color); color: var(--white-fff); }
+.btn-secound.profile::before { content: url("../img/icon/user 1.svg"); width: 14px; height: 14px; }
+
+.profile-modal-block { position: absolute; z-index: 9999; padding: var(--margin-20-px); background: var(--white-fff); border-radius: var(--border-radius-20-px); bottom: -200px; right: 0; display: none; width: 295px; }
+.profile-modal-block a.link-settings { color: var(--main-dark-color); font-weight: 600; font-size: var(--font-size-15-px); display: flex; justify-content: center; align-items: center; gap: 7px; width: auto; }
+.profile-modal-block a.link-settings.s::before { content: url("../img/icon/settings.svg"); width: 29px; height: 29px; display: flex; justify-content: center; align-items: center; gap: 0px; background: #ececec; border-radius: 50%; }
+.profile-modal-block a.link-settings.p::before { content: url("../img/icon/user-white-bg.svg"); width: 29px; height: 29px; display: flex; justify-content: center; align-items: center; gap: 0px; background: #ececec; border-radius: 50%; }
+.profile-modal-block.active { display: block; display: flex; justify-content: space-between; align-items: center; flex-direction: column; gap: 15px; align-items: start; }

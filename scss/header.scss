@@ -1,0 +1,112 @@
+@mixin display-flex-space-between() {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+@mixin display-flex($margin) {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: $margin;
+}
+@mixin display-flex-column($margin) {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: column;
+	gap: $margin;
+}
+
+.header {
+	background: var(--white-fff);
+	padding: 10px 0px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	.container {
+		@include display-flex-space-between;
+		position: relative;
+	}
+	ul {
+		@include display-flex(var(--margin-20-px));
+		li {
+			a {
+				color: var(--mini-text);
+				font-size: var(--font-size-15-px);
+			}
+		}
+	}
+	.header-buttons-wrapper {
+		@include display-flex(5px);
+	}
+}
+.btn-secound {
+	padding: 10px 30px;
+	border-radius: 100px;
+	border: 1px solid var(--main-dark-color);
+	background: transparent;
+	color: var(--main-dark-color);
+	@include display-flex(8px);
+	height: 38px;
+	cursor: pointer;
+	&:hover {
+		text-decoration: none;
+	}
+	&.support {
+		&::before {
+			content: url('../img/icon/user-headset\ 1.svg');
+			width: 14px;
+			height: 14px;
+		}
+	}
+	&.profile {
+		background: var(--main-dark-color);
+		color: var(--white-fff);
+		&::before {
+			content: url('../img/icon/user\ 1.svg');
+			width: 14px;
+			height: 14px;
+		}
+	}
+}
+.profile-modal-block {
+	position: absolute;
+	z-index: 9999;
+	padding: var(--margin-20-px);
+	background: var(--white-fff);
+	border-radius: var(--border-radius-20-px);
+	bottom: -200px;
+	right: 0;
+	display: none;
+	width: 295px;
+	a.link-settings {
+		color: var(--main-dark-color);
+		font-weight: 600;
+		font-size: var(--font-size-15-px);
+		@include display-flex(7px);
+		width: auto;
+		&.s::before {
+			content: url('../img/icon/settings.svg');
+			width: 29px;
+			height: 29px;
+			@include display-flex(0px);
+			background: #ececec;
+			border-radius: 50%;
+		}
+		&.p::before {
+			content: url('../img/icon/user-white-bg.svg');
+			width: 29px;
+			height: 29px;
+			@include display-flex(0px);
+			background: #ececec;
+			border-radius: 50%;
+		}
+	}
+	&.active {
+		display: block;
+		@include display-flex-column(15px);
+		align-items: start;
+	}
+}
