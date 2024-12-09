@@ -1,4 +1,4 @@
-.header { background: var(--white-fff); padding: 10px 0px; position: fixed; top: 0; left: 0; right: 0; width: 100%; }
+.header { background: var(--white-fff); padding: 10px 0px; position: fixed; top: 0; left: 0; z-index: 99999; right: 0; width: 100%; }
 .header .container { display: flex; justify-content: space-between; align-items: center; position: relative; }
 .header ul { display: flex; justify-content: center; align-items: center; gap: var(--margin-20-px); }
 .header ul li a { color: var(--mini-text); font-size: var(--font-size-15-px); }

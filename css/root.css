@@ -42,6 +42,10 @@
 	width: 1170px;
 	margin: 0 auto;
 }
+.mini-container {
+	width: 770px;
+	margin: 0 auto;
+}
 body {
 	background: var(--overlay-white-color);
 }
@@ -53,7 +57,7 @@ a {
 	text-decoration: none;
 }
 .btn {
-	padding: 15px 40px;
+	padding: 15px 60px;
 	border-radius: var(--border-radius-15-px);
 	background: var(--akcent-color-green);
 	color: var(--mini-white-bg);
@@ -77,6 +81,7 @@ a {
 	background: var(--overlay-white-color);
 	border: 1px solid var(--overlay-white-color);
 	color: var(--main-dark-color);
+	width: fit-content;
 	&:hover {
 		background: #c9c9c9;
 		border: 1px solid #c9c9c9;

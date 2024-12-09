@@ -152,3 +152,99 @@ input[type='date']::-webkit-calendar-picker-indicator {
 .summ input {
 	position: relative;
 }
+
+.event-block {
+	padding: var(--margin-20-px);
+	border-radius: var(--border-radius-30-px);
+	background: var(--white-fff);
+	@include display-flex-column(20px);
+	align-items: start;
+	.event-block__wrapp {
+		@include display-flex(20px);
+	}
+	.btn {
+		margin: 0 auto;
+	}
+	.event-block__card {
+		display: flex;
+		flex-direction: column;
+		gap: 8px;
+		position: relative;
+		&__image {
+			width: 231px;
+			height: 231px;
+			border-radius: var(--border-radius-30-px);
+			overflow: hidden;
+			position: relative;
+			z-index: 1;
+			img {
+				transition: 0.4s;
+			}
+			&:hover {
+				img {
+					transform: scale(1.1);
+				}
+			}
+		}
+		.event-block__card__info {
+			display: flex;
+			@include display-flex-column(4px);
+			align-items: start;
+		}
+		.event-block__card__info__name {
+			a {
+				font-size: var(--font-size-15-px);
+				color: var(--main-dark-color);
+				font-weight: 600;
+				&::before {
+					content: '';
+					position: absolute;
+					top: 0;
+					left: 0;
+					bottom: 0;
+					right: 0;
+					width: 100%;
+					height: 100%;
+				}
+			}
+		}
+		.event-block__card__info__geolocation {
+			@include display-flex(4px);
+			font-size: var(--font-size-15-px);
+			color: var(--mini-text);
+			&::after {
+				content: url('../img/icon/geolokation.svg');
+				width: 15px;
+				height: 15px;
+			}
+		}
+		.event-block__card__info__price {
+			@include display-flex(4px);
+			font-size: var(--font-size-15-px);
+			color: var(--mini-text);
+			span {
+				color: var(--akcent-color-green);
+				font-weight: 600;
+				@include display-flex(0px);
+				&::after {
+					content: url('../img/icon/ruble.svg');
+					width: 15px;
+					height: 15px;
+				}
+			}
+		}
+	}
+}
+img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.h2-styles {
+	text-transform: uppercase;
+	color: var(--main-dark-color);
+	font-size: var(--font-size-25-px);
+	span {
+		color: #0055ff;
+	}
+}
