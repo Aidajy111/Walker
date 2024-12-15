@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Walker</title>
+
+		<!-- Подключение шрифтов -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+			rel="stylesheet"
+		/>
+
+		<!-- Подключение стилей -->
+		<link rel="stylesheet" href="./css/root.css" />
+		<link rel="stylesheet" href="./css/style.css" />
+		<link rel="stylesheet" href="./css/header.css" />
+		<link rel="stylesheet" href="./css/main.css" />
+		<link rel="stylesheet" href="./css/footer.css" />
+	</head>
+	<body>
+		<header class="header">
+			<div class="container">
+				<a href="/" class="logo">
+					<img src="./img/icon/logo-walker.svg" alt="logo" />
+				</a>
+				<ul>
+					<li>
+						<a href="#"> Готовые маршруты </a>
+					</li>
+					<li>
+						<a href="#"> Мои маршруты </a>
+					</li>
+					<li>
+						<a href="#"> О приложении </a>
+					</li>
+				</ul>
+				<div class="header-buttons-wrapper">
+					<a href="#" class="btn-secound support">Поддержка</a>
+					<button class="btn-secound profile" id="openProfileModal">
+						Профиль
+					</button>
+				</div>
+				<div class="profile-modal-block" id="openProfileModalBody">
+					<a href="#" class="link-settings s">Настройки</a>
+					<a href="#" class="link-settings p">Профиль</a>
+					<a href="#" class="btn w">Войти</a>
+				</div>
+			</div>
+		</header>
+		<main>
+			<section class="main-block">
+				<div class="container">
+					<div class="bread-crumbs">
+						<a href="/">Главная</a>
+						<div>Красота Бурятии</div>
+					</div>
+					<div class="search-dots-wrapper">
+						<label for="search">
+							Поиск заведений/событий
+							<input type="text" placeholder="Поиск..." id="search" />
+						</label>
+						<button class="btn">Найти</button>
+					</div>
+				</div>
+			</section>
+			<section class="section route-section">
+				<div class="container">
+					<h1 class="big-title">Красота бурятии</h1>
+					<div class="route-redactor">
+						<div class="route-redactor__map">
+							<div class="route-redactor__map__map"></div>
+							<div class="route-redactor__map__specifications">
+								<div class="route-redactor__map__specifications__desc">
+									<p>
+										Петропавловск-Камчатский — город в России, административный
+										центр Камчатского края. Морской порт федерального значения.
+										Награждён орденом Трудового Красного Знамени, является
+										городом воинской славы. Место дислокации базы Тихоокеанского
+										флота России.
+									</p>
+									<button class="edit">Изменить</button>
+								</div>
+								<div class="route-redactor__map__specifications__locations">
+									<div
+										class="route-redactor__map__specifications__locations__left"
+									>
+										<div class="specifications_date">
+											Даты:
+											<span>02.11.24</span>
+											до
+											<span> 14.11.24 </span>
+										</div>
+										<div class="specifications__respublick">
+											Местность: Камчатка
+										</div>
+										<div class="specifications__city">Город: Не указан</div>
+									</div>
+									<button class="edit">Изменить</button>
+								</div>
+								<div class="route-redactor__map__specifications__rags">
+									<div class="rote-card__info__buttons-wrapp__tag">
+										<span class="tag">#горячие источники</span>
+										<span class="tag">#природа</span>
+										<span class="tag">#вулканы</span>
+										<span class="tag">#океан</span>
+									</div>
+									<button class="edit">Добавить</button>
+								</div>
+								.route-redactor__map__specifications
+							</div>
+						</div>
+						<div class="route-redactor__dots"></div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="container">
+				<div class="footer-content">
+					<a href="/" class="footer-logo">
+						<img src="./img/icon/logo-walker-white.svg" alt="logo" />
+					</a>
+					<ul class="footer-list">
+						<li>Компания</li>
+						<li><a href="#"> Главная </a></li>
+						<li><a href="#"> Маршруты </a></li>
+						<li><a href="#"> Мои маршруты </a></li>
+						<li><a href="#"> О приложении </a></li>
+					</ul>
+					<ul class="footer-list">
+						<li>Маршруты</li>
+						<li><a href="#"> Сахалин </a></li>
+						<li><a href="#"> Озеро Байкал </a></li>
+						<li><a href="#"> Горнолыжнвй </a></li>
+						<li><a href="#"> Сочи </a></li>
+						<li><a href="#"> Горы алтая </a></li>
+					</ul>
+					<ul class="footer-list">
+						<li>Партнерам</li>
+						<li><a href="#"> Поддержка </a></li>
+					</ul>
+					<ul class="footer-list">
+						<li>Контакты</li>
+						<li class="mail">
+							<a href="mailto:walker@gmail.com"> walker@gmail.com </a>
+						</li>
+						<li>
+							<a href="tel:+7991788201" class="phone">
+								+7(991) - 788 - 12 - 01
+							</a>
+						</li>
+						<li>
+							<a href="tel:+7991788201" class="phone">
+								+7(991) - 788 - 12 - 01
+							</a>
+						</li>
+						<li class="messenger">
+							<a href="#">
+								<img src="./img/icon/whatsap.svg" alt="" />
+							</a>
+							<a href="#">
+								<img src="./img/icon/telegramm.svg" alt="" />
+							</a>
+							<a href="#">
+								<img src="./img/icon/telegramm.svg" alt="" />
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="politic-wrapp">
+					<a href="#"> Политика обработки персональных данных </a>
+					<div>Все права защищены © 2024</div>
+				</div>
+			</div>
+		</footer>
+		<script src="./js/jquery-3.7.1.min (1).js"></script>
+		<script src="./js/slick.min.js"></script>
+		<script src="./js/main.js"></script>
+	</body>
+</html>

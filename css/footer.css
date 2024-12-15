@@ -1,0 +1,21 @@
+.footer { background: var(--main-dark-color); padding: 80px 0 0px 0; margin-top: 80px; }
+.footer .footer-content { display: flex; justify-content: space-between; align-items: start; }
+.footer .mail { display: flex; gap: 8px; justify-content: center; align-items: center; }
+.footer .mail::before { content: url("../img/icon/mail-icon-green.svg"); height: 14px; }
+.footer .phone { display: flex; gap: 8px; justify-content: center; align-items: center; }
+.footer .phone::before { content: url("../img/icon/phone-call-green.svg"); height: 14px; }
+.footer .politic-wrapp { padding: 20px 0; border-top: 1px solid #959595; margin-top: 30px; display: flex; justify-content: space-between; }
+.footer .politic-wrapp span, .footer .politic-wrapp a { color: var(--mini-text-in-dark-bg); font-size: var(--font-size-20-px); transition: 0.3s; }
+.footer .politic-wrapp span:hover, .footer .politic-wrapp a:hover { color: var(--akcent-color-green); }
+.footer .politic-wrapp div { color: var(--mini-text-in-dark-bg); font-size: var(--font-size-20-px); }
+.footer .messenger { display: flex; gap: 20px; }
+.footer .messenger a { width: 21px; height: 21px; }
+.footer .messenger a:hover { opacity: 0.7; }
+
+.footer-logo { width: 126px; }
+.footer-logo img { width: 126px; object-fit: inherit; }
+
+.footer-list { display: flex; flex-direction: column; gap: var(--margin-30-px); }
+.footer-list li a { color: #afafaf; font-size: var(--font-size-20-px); transition: 0.3s; }
+.footer-list li a:hover { color: var(--akcent-color-green); }
+.footer-list li:first-child { font-weight: 600; text-transform: uppercase; color: var(--mini-white-bg); font-size: var(--font-size-20-px); }

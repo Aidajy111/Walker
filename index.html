@@ -18,6 +18,7 @@
 		<link rel="stylesheet" href="./css/style.css" />
 		<link rel="stylesheet" href="./css/header.css" />
 		<link rel="stylesheet" href="./css/main.css" />
+		<link rel="stylesheet" href="./css/footer.css" />
 	</head>
 	<body>
 		<header class="header">
@@ -30,7 +31,7 @@
 						<a href="#"> Готовые маршруты </a>
 					</li>
 					<li>
-						<a href="#"> Мои маршруты </a>
+						<a href="/all-rout.html"> Мои маршруты </a>
 					</li>
 					<li>
 						<a href="#"> О приложении </a>
@@ -117,7 +118,9 @@
 								>Укажите ваши пожелания через запятую
 								<input type="text" placeholder="кухня, природа, байкал" />
 							</label>
-							<button type="submit" class="btn">Создать маршрут</button>
+							<button type="submit" class="btn" id="createRoute">
+								Создать маршрут
+							</button>
 						</form>
 					</div>
 				</div>
@@ -127,7 +130,67 @@
 					<div class="mini-container">
 						<div class="event-block">
 							<h2 class="h2-styles">Куда поехать <span>зимой?</span></h2>
-							<div class="event-block__wrapp">
+							<div class="event-block__wrapp" id="eventSlid-1">
+								<div class="event-block__card">
+									<div class="event-block__card__image">
+										<img
+											src="./img/beautiful-scenery-winter-landscape-with-trees-covered-with-snow 1.jpg"
+											alt="image"
+										/>
+									</div>
+									<div class="event-block__card__info">
+										<h3 class="event-block__card__info__name">
+											<a href="#">Сахалин</a>
+										</h3>
+										<div class="event-block__card__info__geolocation">
+											Сахалин
+										</div>
+										<div class="event-block__card__info__price">
+											от
+											<span>45 000</span>
+										</div>
+									</div>
+								</div>
+								<div class="event-block__card">
+									<div class="event-block__card__image">
+										<img
+											src="./img/landscape-with-pines-snowy-meadow 1.jpg"
+											alt="image"
+										/>
+									</div>
+									<div class="event-block__card__info">
+										<h3 class="event-block__card__info__name">
+											<a href="#">Горнолыжный </a>
+										</h3>
+										<div class="event-block__card__info__geolocation">
+											Горнолыжный
+										</div>
+										<div class="event-block__card__info__price">
+											от
+											<span>45 000</span>
+										</div>
+									</div>
+								</div>
+								<div class="event-block__card">
+									<div class="event-block__card__image">
+										<img
+											src="./img/high-angle-shot-river-middle-snowy-mountains-covered-trees 1.jpg"
+											alt="image"
+										/>
+									</div>
+									<div class="event-block__card__info">
+										<h3 class="event-block__card__info__name">
+											<a href="#">Озеро Байкал</a>
+										</h3>
+										<div class="event-block__card__info__geolocation">
+											Республика Бурятия
+										</div>
+										<div class="event-block__card__info__price">
+											от
+											<span>54 000</span>
+										</div>
+									</div>
+								</div>
 								<div class="event-block__card">
 									<div class="event-block__card__image">
 										<img
@@ -189,70 +252,118 @@
 									</div>
 								</div>
 							</div>
-							<a href="#" class="btn seccound">Смотреть все</a>
+							<a href="/all-rout.html" class="btn seccound">Смотреть все</a>
 						</div>
 					</div>
 				</div>
 			</section>
-			<section class="section">
+			<section class="section popular">
 				<div class="container">
 					<div class="mini-container">
 						<div class="event-block">
-							<h2 class="h2-styles">Какие события!!!</h2>
-							<div class="event-block__wrapp">
+							<h2 class="h2-styles">Популярные места</h2>
+							<div class="event-block__wrapp" id="eventSlid-2">
 								<div class="event-block__card">
 									<div class="event-block__card__image">
-										<img
-											src="./img/beautiful-scenery-winter-landscape-with-trees-covered-with-snow 1.jpg"
-											alt="image"
-										/>
+										<img src="./img/wr-960 1.jpg" alt="image" />
 									</div>
 									<div class="event-block__card__info">
 										<h3 class="event-block__card__info__name">
-											<a href="#">Сахалин</a>
+											<a href="#">Концерт Басты</a>
 										</h3>
 										<div class="event-block__card__info__geolocation">
-											Сахалин
+											Красноярск
 										</div>
 										<div class="event-block__card__info__price">
 											от
-											<span>45 000</span>
+											<span>5 000</span>
+										</div>
+									</div>
+								</div>
+								<div class="event-block__card">
+									<div class="event-block__card__image">
+										<img src="./img/i (4) 1.jpg" alt="image" />
+									</div>
+									<div class="event-block__card__info">
+										<h3 class="event-block__card__info__name">
+											<a href="#">Борьба на Сурхарбане</a>
+										</h3>
+										<div class="event-block__card__info__geolocation">
+											Сурхарбан
+										</div>
+										<div class="event-block__card__info__price">
+											от
+											<span>500</span>
 										</div>
 									</div>
 								</div>
 								<div class="event-block__card">
 									<div class="event-block__card__image">
 										<img
-											src="./img/landscape-with-pines-snowy-meadow 1.jpg"
+											src="./img/9aa316d6-b2ab-51e9-8c68-83f7a23a6c35 1.jpg"
 											alt="image"
 										/>
 									</div>
 									<div class="event-block__card__info">
 										<h3 class="event-block__card__info__name">
-											<a href="#">Горнолыжный </a>
+											<a href="#">Охота на северное сияние</a>
 										</h3>
 										<div class="event-block__card__info__geolocation">
-											Горнолыжный
+											Камчатка
 										</div>
 										<div class="event-block__card__info__price">
 											от
-											<span>45 000</span>
+											<span>54 000</span>
+										</div>
+									</div>
+								</div>
+								<div class="event-block__card">
+									<div class="event-block__card__image">
+										<img src="./img/wr-960 1.jpg" alt="image" />
+									</div>
+									<div class="event-block__card__info">
+										<h3 class="event-block__card__info__name">
+											<a href="#">Концерт Басты</a>
+										</h3>
+										<div class="event-block__card__info__geolocation">
+											Красноярск
+										</div>
+										<div class="event-block__card__info__price">
+											от
+											<span>5 000</span>
+										</div>
+									</div>
+								</div>
+								<div class="event-block__card">
+									<div class="event-block__card__image">
+										<img src="./img/i (4) 1.jpg" alt="image" />
+									</div>
+									<div class="event-block__card__info">
+										<h3 class="event-block__card__info__name">
+											<a href="#">Борьба на Сурхарбане</a>
+										</h3>
+										<div class="event-block__card__info__geolocation">
+											Сурхарбан
+										</div>
+										<div class="event-block__card__info__price">
+											от
+											<span>500</span>
 										</div>
 									</div>
 								</div>
 								<div class="event-block__card">
 									<div class="event-block__card__image">
 										<img
-											src="./img/high-angle-shot-river-middle-snowy-mountains-covered-trees 1.jpg"
+											src="./img/9aa316d6-b2ab-51e9-8c68-83f7a23a6c35 1.jpg"
 											alt="image"
 										/>
 									</div>
 									<div class="event-block__card__info">
 										<h3 class="event-block__card__info__name">
-											<a href="#">Озеро Байкал</a>
+											<a href="#">Охота на северное сияние</a>
 										</h3>
 										<div class="event-block__card__info__geolocation">
-											Республика Бурятия
+											Камчатка
 										</div>
 										<div class="event-block__card__info__price">
 											от
@@ -265,14 +376,107 @@
 					</div>
 				</div>
 			</section>
-			<section class="section gqlery-section">
+			<section class="section gallery-section">
 				<div class="container">
-					<div class="mini-container"></div>
+					<div class="mini-container">
+						<h2 class="h2-styles">Галерея наших пользователей</h2>
+						<div class="gallery-wrapper">
+							<div class="gallery-wrapper__image image-1">
+								<img
+									src="./img/9aa316d6-b2ab-51e9-8c68-83f7a23a6c35 1.jpg"
+									alt="img"
+								/>
+							</div>
+							<div class="gallery-wrapper__image image-2">
+								<img
+									src="./img/beautiful-scenery-winter-landscape-with-trees-covered-with-snow 1.jpg"
+									alt="img"
+								/>
+							</div>
+							<div class="gallery-wrapper__image image-3">
+								<img
+									src="./img/beautiful-scenery-lake-surrounded-by-snow-covered-trees-swiss-alps-switzerland 1.jpg"
+									alt="img"
+								/>
+							</div>
+							<div class="gallery-wrapper__image image-4">
+								<img
+									src="./img//vertical-shot-ice-snow-beach-sunset 1.jpg"
+									alt="img"
+								/>
+							</div>
+							<div class="gallery-wrapper__image image-5">
+								<img
+									src="./img/high-angle-shot-river-middle-snowy-mountains-covered-trees 1.jpg"
+									alt="img"
+								/>
+							</div>
+						</div>
+					</div>
 				</div>
 			</section>
 		</main>
-		<footer></footer>
+		<footer class="footer">
+			<div class="container">
+				<div class="footer-content">
+					<a href="/" class="footer-logo">
+						<img src="./img/icon/logo-walker-white.svg" alt="logo" />
+					</a>
+					<ul class="footer-list">
+						<li>Компания</li>
+						<li><a href="#"> Главная </a></li>
+						<li><a href="#"> Маршруты </a></li>
+						<li><a href="#"> Мои маршруты </a></li>
+						<li><a href="#"> О приложении </a></li>
+					</ul>
+					<ul class="footer-list">
+						<li>Маршруты</li>
+						<li><a href="#"> Сахалин </a></li>
+						<li><a href="#"> Озеро Байкал </a></li>
+						<li><a href="#"> Горнолыжнвй </a></li>
+						<li><a href="#"> Сочи </a></li>
+						<li><a href="#"> Горы алтая </a></li>
+					</ul>
+					<ul class="footer-list">
+						<li>Партнерам</li>
+						<li><a href="#"> Поддержка </a></li>
+					</ul>
+					<ul class="footer-list">
+						<li>Контакты</li>
+						<li class="mail">
+							<a href="mailto:walker@gmail.com"> walker@gmail.com </a>
+						</li>
+						<li>
+							<a href="tel:+7991788201" class="phone">
+								+7(991) - 788 - 12 - 01
+							</a>
+						</li>
+						<li>
+							<a href="tel:+7991788201" class="phone">
+								+7(991) - 788 - 12 - 01
+							</a>
+						</li>
+						<li class="messenger">
+							<a href="#">
+								<img src="./img/icon/whatsap.svg" alt="" />
+							</a>
+							<a href="#">
+								<img src="./img/icon/telegramm.svg" alt="" />
+							</a>
+							<a href="#">
+								<img src="./img/icon/telegramm.svg" alt="" />
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="politic-wrapp">
+					<a href="#"> Политика обработки персональных данных </a>
+					<div>Все права защищены © 2024</div>
+				</div>
+			</div>
+		</footer>
 		<script src="./js/jquery-3.7.1.min (1).js"></script>
+		<script src="./js/slick.min.js"></script>
 		<script src="./js/main.js"></script>
 	</body>
 </html>

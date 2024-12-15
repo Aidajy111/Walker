@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Walker</title>
+
+		<!-- Подключение шрифтов -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+			rel="stylesheet"
+		/>
+
+		<!-- Подключение стилей -->
+		<link rel="stylesheet" href="./css/root.css" />
+		<link rel="stylesheet" href="./css/style.css" />
+		<link rel="stylesheet" href="./css/header.css" />
+		<link rel="stylesheet" href="./css/main.css" />
+		<link rel="stylesheet" href="./css/footer.css" />
+	</head>
+	<body>
+		<header class="header">
+			<div class="container">
+				<a href="/" class="logo">
+					<img src="./img/icon/logo-walker.svg" alt="logo" />
+				</a>
+				<ul>
+					<li>
+						<a href="#"> Готовые маршруты </a>
+					</li>
+					<li>
+						<a href="#"> Мои маршруты </a>
+					</li>
+					<li>
+						<a href="#"> О приложении </a>
+					</li>
+				</ul>
+				<div class="header-buttons-wrapper">
+					<a href="#" class="btn-secound support">Поддержка</a>
+					<button class="btn-secound profile" id="openProfileModal">
+						Профиль
+					</button>
+				</div>
+				<div class="profile-modal-block" id="openProfileModalBody">
+					<a href="#" class="link-settings s">Настройки</a>
+					<a href="#" class="link-settings p">Профиль</a>
+					<a href="#" class="btn w">Войти</a>
+				</div>
+			</div>
+		</header>
+		<main>
+			<section class="main-block">
+				<div class="container">
+					<div class="bread-crumbs">
+						<a href="/">Главная</a>
+						<div>Готовые маршруты</div>
+					</div>
+					<div class="form-main-block">
+						<h1>Найдите подходящий маршрут</h1>
+						<form action="#">
+							<label
+								>Выбери страну
+								<select name="countres">
+									<option selected value="s1">Выбери страну</option>
+									<option selected value="Россия">Россия</option>
+								</select>
+							</label>
+							<label
+								>Выберите регион
+								<select name="region">
+									<option selected value="s1">Выберите регион</option>
+									<option selected value="Республика Бурятия">
+										Республика Бурятия
+									</option>
+									<option selected value="	Республика Башкортостан">
+										Республика Башкортостан
+									</option>
+									<option selected value="Кабардино-Балкарская Республика">
+										Кабардино-Балкарская Республика
+									</option>
+									<option selected value="Республика Калмыкия">
+										Республика Калмыкия
+									</option>
+									<option selected value="Республика Коми">
+										Республика Коми
+									</option>
+								</select>
+							</label>
+							<label
+								>Выберите город/поселок
+								<select name="cityes">
+									<option selected value="s1">Необязательно</option>
+									<option selected value="Улан-Удэ">Улан-Удэ</option>
+									<option selected value="Бабушкин">Бабушкин</option>
+									<option selected value="Гусиноозёрск">Гусиноозёрск</option>
+									<option selected value="Северобайкальск">
+										Северобайкальск
+									</option>
+									<option selected value="Северобайкальск">
+										Северобайкальск
+									</option>
+								</select>
+							</label>
+							<label class="date-label"
+								>От/до
+								<div>
+									<input type="date" class="input-field" />
+									<input type="date" class="input-field" />
+								</div>
+							</label>
+							<label class="summ"
+								>Бюджет
+								<input type="text" placeholder="Примерная сумма" />
+							</label>
+							<label
+								>Укажите ваши пожелания через запятую
+								<input type="text" placeholder="кухня, природа, байкал" />
+							</label>
+							<button type="submit" class="btn">Найти</button>
+						</form>
+					</div>
+				</div>
+			</section>
+			<section class="section route">
+				<div class="container">
+					<h2 class="big-title">Готовые маршруты</h2>
+					<div class="route_wrapp">
+						<div class="rote-card">
+							<div class="rote-card__slider" id="routeCardSlider">
+								<img
+									src="./img/beautiful-scenery-lake-surrounded-by-snow-covered-trees-swiss-alps-switzerland 1.jpg"
+									alt=""
+								/>
+								<img
+									src="./img/high-angle-shot-river-middle-snowy-mountains-covered-trees 1.jpg"
+									alt=""
+								/>
+								<img
+									src="./img/9aa316d6-b2ab-51e9-8c68-83f7a23a6c35 1.jpg"
+									alt=""
+								/>
+								<img
+									src="./img/beautiful-scenery-lake-surrounded-by-snow-covered-trees-swiss-alps-switzerland 1.jpg"
+									alt=""
+								/>
+								<img
+									src="./img/high-angle-shot-river-middle-snowy-mountains-covered-trees 1.jpg"
+									alt=""
+								/>
+								<img
+									src="./img/9aa316d6-b2ab-51e9-8c68-83f7a23a6c35 1.jpg"
+									alt=""
+								/>
+								<img
+									src="./img/beautiful-scenery-lake-surrounded-by-snow-covered-trees-swiss-alps-switzerland 1.jpg"
+									alt=""
+								/>
+							</div>
+							<div class="rote-card__info">
+								<div class="rote-card__info__top">
+									<div class="rote-card__info__top__left">
+										<h2>Зеленовские озёрки</h2>
+										<div class="rote-card__info__top__left__location">
+											<div
+												class="rote-card__info__top__left__location__address"
+											>
+												<span class="region">Камчатка</span>
+												-
+												<span class="address">Петропаловск-Камчатский</span>
+											</div>
+											<div class="rote-card__info__top__left__location__price">
+												от
+												<span> 30 000 </span>
+											</div>
+											<div class="rote-card__info__top__left__location__date">
+												<span class="texts-date"> Даты: </span>
+												<span class="int-date"> от 12.12.24 до 20.01.25 </span>
+											</div>
+										</div>
+									</div>
+									<div class="rote-card__info__top__right">
+										<span>4.4</span>
+										<img src="./img/icon/reting-star.svg" alt="" />
+									</div>
+								</div>
+								<div class="route-card__info__bottom">
+									<div class="rote-card__info__desc-rout">
+										<p>
+											Один из самых посещаемых оборудованных природных горячих
+											источников. Здесь есть специальные термы с удобным
+											подходом в виде деревянных настилов, а температура воды
+											варьируется от прохладной до горячей.
+										</p>
+									</div>
+									<div class="rote-card__info__buttons-wrapp">
+										<div class="rote-card__info__buttons-wrapp__tag">
+											<span class="tag">#горячие источники</span>
+											<span class="tag">#природа</span>
+											<span class="tag">#вулканы</span>
+											<span class="tag">#океан</span>
+										</div>
+										<div class="rote-card__info__buttons-wrapp__buttons">
+											<a href="#" class="btn"> Смотреть маршрут </a>
+											<button
+												class="btn seccound dnt-save-route"
+												id="dntSaveRoute"
+											>
+												Добавить в мои
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="rote-card">
+							<div class="rote-card__slider" id="routeCardSlider">
+								<img
+									src="./img/high-angle-shot-river-middle-snowy-mountains-covered-trees 1.jpg"
+									alt=""
+								/>
+								<img
+									src="./img/beautiful-scenery-lake-surrounded-by-snow-covered-trees-swiss-alps-switzerland 1.jpg"
+									alt=""
+								/>
+								<img
+									src="./img/9aa316d6-b2ab-51e9-8c68-83f7a23a6c35 1.jpg"
+									alt=""
+								/>
+								<img
+									src="./img/beautiful-scenery-lake-surrounded-by-snow-covered-trees-swiss-alps-switzerland 1.jpg"
+									alt=""
+								/>
+								<img
+									src="./img/high-angle-shot-river-middle-snowy-mountains-covered-trees 1.jpg"
+									alt=""
+								/>
+								<img
+									src="./img/9aa316d6-b2ab-51e9-8c68-83f7a23a6c35 1.jpg"
+									alt=""
+								/>
+								<img
+									src="./img/beautiful-scenery-lake-surrounded-by-snow-covered-trees-swiss-alps-switzerland 1.jpg"
+									alt=""
+								/>
+							</div>
+							<div class="rote-card__info">
+								<div class="rote-card__info__top">
+									<div class="rote-card__info__top__left">
+										<h2>Зеленовские озёрки</h2>
+										<div class="rote-card__info__top__left__location">
+											<div
+												class="rote-card__info__top__left__location__address"
+											>
+												<span class="region">Камчатка</span>
+												-
+												<span class="address">Петропаловск-Камчатский</span>
+											</div>
+											<div class="rote-card__info__top__left__location__price">
+												от
+												<span> 30 000 </span>
+											</div>
+											<div class="rote-card__info__top__left__location__date">
+												<span class="texts-date"> Даты: </span>
+												<span class="int-date"> от 12.12.24 до 20.01.25 </span>
+											</div>
+										</div>
+									</div>
+									<div class="rote-card__info__top__right">
+										<span>4.4</span>
+										<img src="./img/icon/reting-star.svg" alt="" />
+									</div>
+								</div>
+								<div class="route-card__info__bottom">
+									<div class="rote-card__info__desc-rout">
+										<p>
+											Один из самых посещаемых оборудованных природных горячих
+											источников. Здесь есть специальные термы с удобным
+											подходом в виде деревянных настилов, а температура воды
+											варьируется от прохладной до горячей.
+										</p>
+									</div>
+									<div class="rote-card__info__buttons-wrapp">
+										<div class="rote-card__info__buttons-wrapp__tag">
+											<span class="tag">#горячие источники</span>
+											<span class="tag">#природа</span>
+											<span class="tag">#вулканы</span>
+											<span class="tag">#океан</span>
+										</div>
+										<div class="rote-card__info__buttons-wrapp__buttons">
+											<a href="#" class="btn"> Смотреть маршрут </a>
+											<button
+												class="btn seccound dnt-save-route"
+												id="dntSaveRoute"
+											>
+												Добавить в мои
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="rote-card">
+							<div class="rote-card__slider" id="routeCardSlider">
+								<img
+									src="./img/9aa316d6-b2ab-51e9-8c68-83f7a23a6c35 1.jpg"
+									alt=""
+								/>
+								<img
+									src="./img/high-angle-shot-river-middle-snowy-mountains-covered-trees 1.jpg"
+									alt=""
+								/>
+								<img
+									src="./img/beautiful-scenery-lake-surrounded-by-snow-covered-trees-swiss-alps-switzerland 1.jpg"
+									alt=""
+								/>
+								<img
+									src="./img/beautiful-scenery-lake-surrounded-by-snow-covered-trees-swiss-alps-switzerland 1.jpg"
+									alt=""
+								/>
+								<img
+									src="./img/high-angle-shot-river-middle-snowy-mountains-covered-trees 1.jpg"
+									alt=""
+								/>
+								<img
+									src="./img/9aa316d6-b2ab-51e9-8c68-83f7a23a6c35 1.jpg"
+									alt=""
+								/>
+								<img
+									src="./img/beautiful-scenery-lake-surrounded-by-snow-covered-trees-swiss-alps-switzerland 1.jpg"
+									alt=""
+								/>
+							</div>
+							<div class="rote-card__info">
+								<div class="rote-card__info__top">
+									<div class="rote-card__info__top__left">
+										<h2>Зеленовские озёрки</h2>
+										<div class="rote-card__info__top__left__location">
+											<div
+												class="rote-card__info__top__left__location__address"
+											>
+												<span class="region">Камчатка</span>
+												-
+												<span class="address">Петропаловск-Камчатский</span>
+											</div>
+											<div class="rote-card__info__top__left__location__price">
+												от
+												<span> 30 000 </span>
+											</div>
+											<div class="rote-card__info__top__left__location__date">
+												<span class="texts-date"> Даты: </span>
+												<span class="int-date"> от 12.12.24 до 20.01.25 </span>
+											</div>
+										</div>
+									</div>
+									<div class="rote-card__info__top__right">
+										<span>4.4</span>
+										<img src="./img/icon/reting-star.svg" alt="" />
+									</div>
+								</div>
+								<div class="route-card__info__bottom">
+									<div class="rote-card__info__desc-rout">
+										<p>
+											Один из самых посещаемых оборудованных природных горячих
+											источников. Здесь есть специальные термы с удобным
+											подходом в виде деревянных настилов, а температура воды
+											варьируется от прохладной до горячей.
+										</p>
+									</div>
+									<div class="rote-card__info__buttons-wrapp">
+										<div class="rote-card__info__buttons-wrapp__tag">
+											<span class="tag">#горячие источники</span>
+											<span class="tag">#природа</span>
+											<span class="tag">#вулканы</span>
+											<span class="tag">#океан</span>
+										</div>
+										<div class="rote-card__info__buttons-wrapp__buttons">
+											<a href="#" class="btn"> Смотреть маршрут </a>
+											<button
+												class="btn seccound dnt-save-route"
+												id="dntSaveRoute"
+											>
+												Добавить в мои
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="rote-card">
+							<div class="rote-card__slider" id="routeCardSlider">
+								<img
+									src="./img/beautiful-scenery-lake-surrounded-by-snow-covered-trees-swiss-alps-switzerland 1.jpg"
+									alt=""
+								/>
+								<img
+									src="./img/high-angle-shot-river-middle-snowy-mountains-covered-trees 1.jpg"
+									alt=""
+								/>
+								<img
+									src="./img/9aa316d6-b2ab-51e9-8c68-83f7a23a6c35 1.jpg"
+									alt=""
+								/>
+								<img
+									src="./img/beautiful-scenery-lake-surrounded-by-snow-covered-trees-swiss-alps-switzerland 1.jpg"
+									alt=""
+								/>
+								<img
+									src="./img/high-angle-shot-river-middle-snowy-mountains-covered-trees 1.jpg"
+									alt=""
+								/>
+								<img
+									src="./img/9aa316d6-b2ab-51e9-8c68-83f7a23a6c35 1.jpg"
+									alt=""
+								/>
+								<img
+									src="./img/beautiful-scenery-lake-surrounded-by-snow-covered-trees-swiss-alps-switzerland 1.jpg"
+									alt=""
+								/>
+							</div>
+							<div class="rote-card__info">
+								<div class="rote-card__info__top">
+									<div class="rote-card__info__top__left">
+										<h2>Зеленовские озёрки</h2>
+										<div class="rote-card__info__top__left__location">
+											<div
+												class="rote-card__info__top__left__location__address"
+											>
+												<span class="region">Камчатка</span>
+												-
+												<span class="address">Петропаловск-Камчатский</span>
+											</div>
+											<div class="rote-card__info__top__left__location__price">
+												от
+												<span> 30 000 </span>
+											</div>
+											<div class="rote-card__info__top__left__location__date">
+												<span class="texts-date"> Даты: </span>
+												<span class="int-date"> от 12.12.24 до 20.01.25 </span>
+											</div>
+										</div>
+									</div>
+									<div class="rote-card__info__top__right">
+										<span>4.4</span>
+										<img src="./img/icon/reting-star.svg" alt="" />
+									</div>
+								</div>
+								<div class="route-card__info__bottom">
+									<div class="rote-card__info__desc-rout">
+										<p>
+											Один из самых посещаемых оборудованных природных горячих
+											источников. Здесь есть специальные термы с удобным
+											подходом в виде деревянных настилов, а температура воды
+											варьируется от прохладной до горячей.
+										</p>
+									</div>
+									<div class="rote-card__info__buttons-wrapp">
+										<div class="rote-card__info__buttons-wrapp__tag">
+											<span class="tag">#горячие источники</span>
+											<span class="tag">#природа</span>
+											<span class="tag">#вулканы</span>
+											<span class="tag">#океан</span>
+										</div>
+										<div class="rote-card__info__buttons-wrapp__buttons">
+											<a href="#" class="btn"> Смотреть маршрут </a>
+											<button
+												class="btn seccound dnt-save-route"
+												id="dntSaveRoute"
+											>
+												Добавить в мои
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="rote-card">
+							<div class="rote-card__slider" id="routeCardSlider">
+								<img
+									src="./img/high-angle-shot-river-middle-snowy-mountains-covered-trees 1.jpg"
+									alt=""
+								/>
+								<img
+									src="./img/beautiful-scenery-lake-surrounded-by-snow-covered-trees-swiss-alps-switzerland 1.jpg"
+									alt=""
+								/>
+								<img
+									src="./img/9aa316d6-b2ab-51e9-8c68-83f7a23a6c35 1.jpg"
+									alt=""
+								/>
+								<img
+									src="./img/beautiful-scenery-lake-surrounded-by-snow-covered-trees-swiss-alps-switzerland 1.jpg"
+									alt=""
+								/>
+								<img
+									src="./img/high-angle-shot-river-middle-snowy-mountains-covered-trees 1.jpg"
+									alt=""
+								/>
+								<img
+									src="./img/9aa316d6-b2ab-51e9-8c68-83f7a23a6c35 1.jpg"
+									alt=""
+								/>
+								<img
+									src="./img/beautiful-scenery-lake-surrounded-by-snow-covered-trees-swiss-alps-switzerland 1.jpg"
+									alt=""
+								/>
+							</div>
+							<div class="rote-card__info">
+								<div class="rote-card__info__top">
+									<div class="rote-card__info__top__left">
+										<h2>Зеленовские озёрки</h2>
+										<div class="rote-card__info__top__left__location">
+											<div
+												class="rote-card__info__top__left__location__address"
+											>
+												<span class="region">Камчатка</span>
+												-
+												<span class="address">Петропаловск-Камчатский</span>
+											</div>
+											<div class="rote-card__info__top__left__location__price">
+												от
+												<span> 30 000 </span>
+											</div>
+											<div class="rote-card__info__top__left__location__date">
+												<span class="texts-date"> Даты: </span>
+												<span class="int-date"> от 12.12.24 до 20.01.25 </span>
+											</div>
+										</div>
+									</div>
+									<div class="rote-card__info__top__right">
+										<span>4.4</span>
+										<img src="./img/icon/reting-star.svg" alt="" />
+									</div>
+								</div>
+								<div class="route-card__info__bottom">
+									<div class="rote-card__info__desc-rout">
+										<p>
+											Один из самых посещаемых оборудованных природных горячих
+											источников. Здесь есть специальные термы с удобным
+											подходом в виде деревянных настилов, а температура воды
+											варьируется от прохладной до горячей.
+										</p>
+									</div>
+									<div class="rote-card__info__buttons-wrapp">
+										<div class="rote-card__info__buttons-wrapp__tag">
+											<span class="tag">#горячие источники</span>
+											<span class="tag">#природа</span>
+											<span class="tag">#вулканы</span>
+											<span class="tag">#океан</span>
+										</div>
+										<div class="rote-card__info__buttons-wrapp__buttons">
+											<a href="#" class="btn"> Смотреть маршрут </a>
+											<button
+												class="btn seccound dnt-save-route"
+												id="dntSaveRoute"
+											>
+												Добавить в мои
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="rote-card">
+							<div class="rote-card__slider" id="routeCardSlider">
+								<img
+									src="./img/9aa316d6-b2ab-51e9-8c68-83f7a23a6c35 1.jpg"
+									alt=""
+								/>
+								<img
+									src="./img/high-angle-shot-river-middle-snowy-mountains-covered-trees 1.jpg"
+									alt=""
+								/>
+								<img
+									src="./img/beautiful-scenery-lake-surrounded-by-snow-covered-trees-swiss-alps-switzerland 1.jpg"
+									alt=""
+								/>
+								<img
+									src="./img/beautiful-scenery-lake-surrounded-by-snow-covered-trees-swiss-alps-switzerland 1.jpg"
+									alt=""
+								/>
+								<img
+									src="./img/high-angle-shot-river-middle-snowy-mountains-covered-trees 1.jpg"
+									alt=""
+								/>
+								<img
+									src="./img/9aa316d6-b2ab-51e9-8c68-83f7a23a6c35 1.jpg"
+									alt=""
+								/>
+								<img
+									src="./img/beautiful-scenery-lake-surrounded-by-snow-covered-trees-swiss-alps-switzerland 1.jpg"
+									alt=""
+								/>
+							</div>
+							<div class="rote-card__info">
+								<div class="rote-card__info__top">
+									<div class="rote-card__info__top__left">
+										<h2>Зеленовские озёрки</h2>
+										<div class="rote-card__info__top__left__location">
+											<div
+												class="rote-card__info__top__left__location__address"
+											>
+												<span class="region">Камчатка</span>
+												-
+												<span class="address">Петропаловск-Камчатский</span>
+											</div>
+											<div class="rote-card__info__top__left__location__price">
+												от
+												<span> 30 000 </span>
+											</div>
+											<div class="rote-card__info__top__left__location__date">
+												<span class="texts-date"> Даты: </span>
+												<span class="int-date"> от 12.12.24 до 20.01.25 </span>
+											</div>
+										</div>
+									</div>
+									<div class="rote-card__info__top__right">
+										<span>4.4</span>
+										<img src="./img/icon/reting-star.svg" alt="" />
+									</div>
+								</div>
+								<div class="route-card__info__bottom">
+									<div class="rote-card__info__desc-rout">
+										<p>
+											Один из самых посещаемых оборудованных природных горячих
+											источников. Здесь есть специальные термы с удобным
+											подходом в виде деревянных настилов, а температура воды
+											варьируется от прохладной до горячей.
+										</p>
+									</div>
+									<div class="rote-card__info__buttons-wrapp">
+										<div class="rote-card__info__buttons-wrapp__tag">
+											<span class="tag">#горячие источники</span>
+											<span class="tag">#природа</span>
+											<span class="tag">#вулканы</span>
+											<span class="tag">#океан</span>
+										</div>
+										<div class="rote-card__info__buttons-wrapp__buttons">
+											<a href="#" class="btn"> Смотреть маршрут </a>
+											<button
+												class="btn seccound dnt-save-route"
+												id="dntSaveRoute"
+											>
+												Добавить в мои
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="rote-card">
+							<div class="rote-card__slider" id="routeCardSlider">
+								<img
+									src="./img/high-angle-shot-river-middle-snowy-mountains-covered-trees 1.jpg"
+									alt=""
+								/>
+								<img
+									src="./img/beautiful-scenery-lake-surrounded-by-snow-covered-trees-swiss-alps-switzerland 1.jpg"
+									alt=""
+								/>
+								<img
+									src="./img/9aa316d6-b2ab-51e9-8c68-83f7a23a6c35 1.jpg"
+									alt=""
+								/>
+								<img
+									src="./img/beautiful-scenery-lake-surrounded-by-snow-covered-trees-swiss-alps-switzerland 1.jpg"
+									alt=""
+								/>
+								<img
+									src="./img/high-angle-shot-river-middle-snowy-mountains-covered-trees 1.jpg"
+									alt=""
+								/>
+								<img
+									src="./img/9aa316d6-b2ab-51e9-8c68-83f7a23a6c35 1.jpg"
+									alt=""
+								/>
+								<img
+									src="./img/beautiful-scenery-lake-surrounded-by-snow-covered-trees-swiss-alps-switzerland 1.jpg"
+									alt=""
+								/>
+							</div>
+							<div class="rote-card__info">
+								<div class="rote-card__info__top">
+									<div class="rote-card__info__top__left">
+										<h2>Зеленовские озёрки</h2>
+										<div class="rote-card__info__top__left__location">
+											<div
+												class="rote-card__info__top__left__location__address"
+											>
+												<span class="region">Камчатка</span>
+												-
+												<span class="address">Петропаловск-Камчатский</span>
+											</div>
+											<div class="rote-card__info__top__left__location__price">
+												от
+												<span> 30 000 </span>
+											</div>
+											<div class="rote-card__info__top__left__location__date">
+												<span class="texts-date"> Даты: </span>
+												<span class="int-date"> от 12.12.24 до 20.01.25 </span>
+											</div>
+										</div>
+									</div>
+									<div class="rote-card__info__top__right">
+										<span>4.4</span>
+										<img src="./img/icon/reting-star.svg" alt="" />
+									</div>
+								</div>
+								<div class="route-card__info__bottom">
+									<div class="rote-card__info__desc-rout">
+										<p>
+											Один из самых посещаемых оборудованных природных горячих
+											источников. Здесь есть специальные термы с удобным
+											подходом в виде деревянных настилов, а температура воды
+											варьируется от прохладной до горячей.
+										</p>
+									</div>
+									<div class="rote-card__info__buttons-wrapp">
+										<div class="rote-card__info__buttons-wrapp__tag">
+											<span class="tag">#горячие источники</span>
+											<span class="tag">#природа</span>
+											<span class="tag">#вулканы</span>
+											<span class="tag">#океан</span>
+										</div>
+										<div class="rote-card__info__buttons-wrapp__buttons">
+											<a href="#" class="btn"> Смотреть маршрут </a>
+											<button
+												class="btn seccound dnt-save-route"
+												id="dntSaveRoute"
+											>
+												Добавить в мои
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="rote-card">
+							<div class="rote-card__slider" id="routeCardSlider">
+								<img
+									src="./img/9aa316d6-b2ab-51e9-8c68-83f7a23a6c35 1.jpg"
+									alt=""
+								/>
+								<img
+									src="./img/high-angle-shot-river-middle-snowy-mountains-covered-trees 1.jpg"
+									alt=""
+								/>
+								<img
+									src="./img/beautiful-scenery-lake-surrounded-by-snow-covered-trees-swiss-alps-switzerland 1.jpg"
+									alt=""
+								/>
+								<img
+									src="./img/beautiful-scenery-lake-surrounded-by-snow-covered-trees-swiss-alps-switzerland 1.jpg"
+									alt=""
+								/>
+								<img
+									src="./img/high-angle-shot-river-middle-snowy-mountains-covered-trees 1.jpg"
+									alt=""
+								/>
+								<img
+									src="./img/9aa316d6-b2ab-51e9-8c68-83f7a23a6c35 1.jpg"
+									alt=""
+								/>
+								<img
+									src="./img/beautiful-scenery-lake-surrounded-by-snow-covered-trees-swiss-alps-switzerland 1.jpg"
+									alt=""
+								/>
+							</div>
+							<div class="rote-card__info">
+								<div class="rote-card__info__top">
+									<div class="rote-card__info__top__left">
+										<h2>Зеленовские озёрки</h2>
+										<div class="rote-card__info__top__left__location">
+											<div
+												class="rote-card__info__top__left__location__address"
+											>
+												<span class="region">Камчатка</span>
+												-
+												<span class="address">Петропаловск-Камчатский</span>
+											</div>
+											<div class="rote-card__info__top__left__location__price">
+												от
+												<span> 30 000 </span>
+											</div>
+											<div class="rote-card__info__top__left__location__date">
+												<span class="texts-date"> Даты: </span>
+												<span class="int-date"> от 12.12.24 до 20.01.25 </span>
+											</div>
+										</div>
+									</div>
+									<div class="rote-card__info__top__right">
+										<span>4.4</span>
+										<img src="./img/icon/reting-star.svg" alt="" />
+									</div>
+								</div>
+								<div class="route-card__info__bottom">
+									<div class="rote-card__info__desc-rout">
+										<p>
+											Один из самых посещаемых оборудованных природных горячих
+											источников. Здесь есть специальные термы с удобным
+											подходом в виде деревянных настилов, а температура воды
+											варьируется от прохладной до горячей.
+										</p>
+									</div>
+									<div class="rote-card__info__buttons-wrapp">
+										<div class="rote-card__info__buttons-wrapp__tag">
+											<span class="tag">#горячие источники</span>
+											<span class="tag">#природа</span>
+											<span class="tag">#вулканы</span>
+											<span class="tag">#океан</span>
+										</div>
+										<div class="rote-card__info__buttons-wrapp__buttons">
+											<a href="#" class="btn"> Смотреть маршрут </a>
+											<button
+												class="btn seccound dnt-save-route"
+												id="dntSaveRoute"
+											>
+												Добавить в мои
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="pagination">
+						<a href="#" class="prev-btn">
+							<img src="./img/icon/angle-small-right-prev1.svg" alt="" />
+						</a>
+						<a href="#" class="active">1</a>
+						<a href="#">2</a>
+						<a href="#">3</a>
+						<a href="#">4</a>
+						<a href="#" class="prev-btn">
+							<img src="./img/icon/angle-small-right-next1.svg" alt="" />
+						</a>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="container">
+				<div class="footer-content">
+					<a href="/" class="footer-logo">
+						<img src="./img/icon/logo-walker-white.svg" alt="logo" />
+					</a>
+					<ul class="footer-list">
+						<li>Компания</li>
+						<li><a href="#"> Главная </a></li>
+						<li><a href="#"> Маршруты </a></li>
+						<li><a href="#"> Мои маршруты </a></li>
+						<li><a href="#"> О приложении </a></li>
+					</ul>
+					<ul class="footer-list">
+						<li>Маршруты</li>
+						<li><a href="#"> Сахалин </a></li>
+						<li><a href="#"> Озеро Байкал </a></li>
+						<li><a href="#"> Горнолыжнвй </a></li>
+						<li><a href="#"> Сочи </a></li>
+						<li><a href="#"> Горы алтая </a></li>
+					</ul>
+					<ul class="footer-list">
+						<li>Партнерам</li>
+						<li><a href="#"> Поддержка </a></li>
+					</ul>
+					<ul class="footer-list">
+						<li>Контакты</li>
+						<li class="mail">
+							<a href="mailto:walker@gmail.com"> walker@gmail.com </a>
+						</li>
+						<li>
+							<a href="tel:+7991788201" class="phone">
+								+7(991) - 788 - 12 - 01
+							</a>
+						</li>
+						<li>
+							<a href="tel:+7991788201" class="phone">
+								+7(991) - 788 - 12 - 01
+							</a>
+						</li>
+						<li class="messenger">
+							<a href="#">
+								<img src="./img/icon/whatsap.svg" alt="" />
+							</a>
+							<a href="#">
+								<img src="./img/icon/telegramm.svg" alt="" />
+							</a>
+							<a href="#">
+								<img src="./img/icon/telegramm.svg" alt="" />
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="politic-wrapp">
+					<a href="#"> Политика обработки персональных данных </a>
+					<div>Все права защищены © 2024</div>
+				</div>
+			</div>
+		</footer>
+		<script src="./js/jquery-3.7.1.min (1).js"></script>
+		<script src="./js/slick.min.js"></script>
+		<script src="./js/main.js"></script>
+	</body>
+</html>

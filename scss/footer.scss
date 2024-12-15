@@ -1,0 +1,89 @@
+.footer {
+	background: var(--main-dark-color);
+	padding: 80px 0 0px 0;
+	margin-top: 80px;
+	.footer-content {
+		display: flex;
+		justify-content: space-between;
+		align-items: start;
+	}
+	.mail {
+		display: flex;
+		gap: 8px;
+		justify-content: center;
+		align-items: center;
+		&::before {
+			content: url('../img/icon/mail-icon-green.svg');
+			height: 14px;
+		}
+	}
+	.phone {
+		display: flex;
+		gap: 8px;
+		justify-content: center;
+		align-items: center;
+		&::before {
+			content: url('../img/icon/phone-call-green.svg');
+			height: 14px;
+		}
+	}
+	.politic-wrapp {
+		padding: 20px 0;
+		border-top: 1px solid #959595;
+		margin-top: 30px;
+		display: flex;
+		justify-content: space-between;
+		span,
+		a {
+			color: var(--mini-text-in-dark-bg);
+			font-size: var(--font-size-20-px);
+			transition: 0.3s;
+			&:hover {
+				color: var(--akcent-color-green);
+			}
+		}
+		div {
+			color: var(--mini-text-in-dark-bg);
+			font-size: var(--font-size-20-px);
+		}
+	}
+	.messenger {
+		display: flex;
+		gap: 20px;
+		a {
+			width: 21px;
+			height: 21px;
+			&:hover {
+				opacity: 0.7;
+			}
+		}
+	}
+}
+.footer-logo {
+	width: 126px;
+	img {
+		width: 126px;
+		object-fit: inherit;
+	}
+}
+.footer-list {
+	display: flex;
+	flex-direction: column;
+	gap: var(--margin-30-px);
+	li {
+		a {
+			color: #afafaf;
+			font-size: var(--font-size-20-px);
+			transition: 0.3s;
+			&:hover {
+				color: var(--akcent-color-green);
+			}
+		}
+	}
+	li:first-child {
+		font-weight: 600;
+		text-transform: uppercase;
+		color: var(--mini-white-bg);
+		font-size: var(--font-size-20-px);
+	}
+}
