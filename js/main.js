@@ -220,51 +220,53 @@ $(document).ready(function () {
 })
 
 $(document).ready(function () {
-	// Обновление итоговой стоимости при изменении количества людей
-	function updateTotalCost(card) {
-		const adultsCount = parseInt($('#adults-count').text(), 10)
-		const childrenCount = parseInt($('#children-count').text(), 10)
-		const totalPeople = adultsCount + childrenCount
+	if ($('main').hasClass('page-my-roue')) {
+		// Обновление итоговой стоимости при изменении количества людей
+		function updateTotalCost(card) {
+			const adultsCount = parseInt($('#adults-count').text(), 10)
+			const childrenCount = parseInt($('#children-count').text(), 10)
+			const totalPeople = adultsCount + childrenCount
 
-		// Получаем средний чек для текущего заведения
-		const averageCheck = parseFloat(
+			// Получаем средний чек для текущего заведения
+			const averageCheck = parseFloat(
+				card
+					.find('.dots-card__information__bottom__price .green-text')
+					.text()
+					.replace(',', '.')
+			)
+
+			// Рассчитываем итоговую стоимость
+			const totalCost = totalPeople * averageCheck
+
+			// Обновляем отображение стоимости
 			card
 				.find('.dots-card__information__bottom__price .green-text')
-				.text()
-				.replace(',', '.')
-		)
-
-		// Рассчитываем итоговую стоимость
-		const totalCost = totalPeople * averageCheck
-
-		// Обновляем отображение стоимости
-		card
-			.find('.dots-card__information__bottom__price .green-text')
-			.text(`${totalCost.toFixed(2)}`)
-	}
-
-	// Обработчик для кнопок изменения количества людей
-	$(document).on('click', '.counter__btn', function () {
-		const target = $(this).data('target')
-		const countElement = $(`#${target}-count`)
-		let count = parseInt(countElement.text(), 10)
-
-		if ($(this).hasClass('plus')) {
-			count += 1
-		} else if ($(this).hasClass('minus') && count > 0) {
-			count -= 1
+				.text(`${totalCost.toFixed(2)}`)
 		}
 
-		countElement.text(count)
+		// Обработчик для кнопок изменения количества людей
+		$(document).on('click', '.counter__btn', function () {
+			const target = $(this).data('target')
+			const countElement = $(`#${target}-count`)
+			let count = parseInt(countElement.text(), 10)
 
-		// Обновляем стоимость для каждого заведения
+			if ($(this).hasClass('plus')) {
+				count += 1
+			} else if ($(this).hasClass('minus') && count > 0) {
+				count -= 1
+			}
+
+			countElement.text(count)
+
+			// Обновляем стоимость для каждого заведения
+			$('.dots-card').each(function () {
+				updateTotalCost($(this))
+			})
+		})
+
+		// Инициализация: обновляем стоимость при загрузке страницы
 		$('.dots-card').each(function () {
 			updateTotalCost($(this))
 		})
-	})
-
-	// Инициализация: обновляем стоимость при загрузке страницы
-	$('.dots-card').each(function () {
-		updateTotalCost($(this))
-	})
+	}
 })
